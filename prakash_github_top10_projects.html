@@ -1,0 +1,200 @@
+
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: var(--font-sans); }
+.header { padding: 1.5rem 0 1rem; }
+.header h2 { font-size: 18px; font-weight: 500; color: var(--color-text-primary); }
+.header p { font-size: 13px; color: var(--color-text-secondary); margin-top: 4px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 12px; padding-bottom: 1rem; }
+.card {
+  background: var(--color-background-primary);
+  border: 0.5px solid var(--color-border-tertiary);
+  border-radius: var(--border-radius-lg);
+  padding: 1rem 1.25rem;
+  transition: border-color 0.2s;
+  cursor: pointer;
+}
+.card:hover { border-color: var(--color-border-secondary); }
+.card-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; margin-bottom: 10px; }
+.card-title { font-size: 14px; font-weight: 500; color: var(--color-text-primary); line-height: 1.4; }
+.rank { font-size: 11px; font-weight: 500; background: var(--color-background-secondary); color: var(--color-text-secondary); padding: 2px 8px; border-radius: 20px; white-space: nowrap; flex-shrink: 0; }
+.card-desc { font-size: 13px; color: var(--color-text-secondary); line-height: 1.6; margin-bottom: 12px; }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
+.tag { font-size: 11px; padding: 3px 9px; border-radius: 20px; font-weight: 500; }
+.tag-ts   { background: #E6F1FB; color: #0C447C; }
+.tag-py   { background: #EAF3DE; color: #27500A; }
+.tag-dart { background: #E1F5EE; color: #085041; }
+.tag-html { background: #FAECE7; color: #712B13; }
+.tag-saas { background: #EEEDFE; color: #3C3489; }
+.tag-auto { background: #FAEEDA; color: #633806; }
+.tag-ai   { background: #FBEAF0; color: #72243E; }
+.tag-n8n  { background: #F1EFE8; color: #444441; }
+@media (prefers-color-scheme: dark) {
+  .tag-ts   { background: #0C447C; color: #B5D4F4; }
+  .tag-py   { background: #27500A; color: #C0DD97; }
+  .tag-dart { background: #085041; color: #9FE1CB; }
+  .tag-html { background: #712B13; color: #F5C4B3; }
+  .tag-saas { background: #3C3489; color: #CECBF6; }
+  .tag-auto { background: #633806; color: #FAC775; }
+  .tag-ai   { background: #72243E; color: #F4C0D1; }
+  .tag-n8n  { background: #444441; color: #D3D1C7; }
+}
+.card-footer { display: flex; align-items: center; justify-content: space-between; }
+.github-link {
+  display: inline-flex; align-items: center; gap: 5px;
+  font-size: 12px; color: var(--color-text-secondary);
+  text-decoration: none;
+  padding: 4px 10px;
+  border: 0.5px solid var(--color-border-secondary);
+  border-radius: var(--border-radius-md);
+  transition: background 0.15s;
+}
+.github-link:hover { background: var(--color-background-secondary); }
+.img-prompt-btn {
+  font-size: 11px;
+  color: var(--color-text-secondary);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: var(--border-radius-md);
+  transition: background 0.15s;
+}
+.img-prompt-btn:hover { background: var(--color-background-secondary); color: var(--color-text-primary); }
+.prompt-box {
+  display: none;
+  margin-top: 12px;
+  background: var(--color-background-secondary);
+  border: 0.5px solid var(--color-border-tertiary);
+  border-radius: var(--border-radius-md);
+  padding: 10px 12px;
+  font-size: 12px;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+.prompt-box.show { display: block; }
+.prompt-label { font-size: 11px; font-weight: 500; color: var(--color-text-secondary); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 4px; }
+</style>
+
+<div class="header">
+  <h2>Prakash Ramakrishnan — Top 10 Projects</h2>
+  <p>Ranked by complexity, tech stack depth &amp; real-world utility · <a href="https://github.com/Prakash-Ramakrishnan110" style="color:var(--color-text-info)">@Prakash-Ramakrishnan110</a></p>
+</div>
+
+<div class="grid" id="cards"></div>
+
+<script>
+const projects = [
+  {
+    rank: "#1",
+    name: "WAutoFlow — WhatsApp Automation SaaS",
+    desc: "Full-stack B2B SaaS platform for automating business WhatsApp messaging via the official Meta Cloud API. Includes JWT auth, role-based access, Stripe/Razorpay payments, event-based triggers, and analytics dashboard.",
+    tags: [["TypeScript","tag-ts"],["SaaS","tag-saas"],["Node.js","tag-ts"],["Next.js","tag-ts"],["PostgreSQL","tag-n8n"]],
+    link: "https://github.com/Prakash-Ramakrishnan110/WAutoFlow---WhatsApp-Automation-SaaS-",
+    prompt: "A dark-mode SaaS dashboard interface glowing with green WhatsApp message bubbles flowing through automated pipeline nodes, circuit-board aesthetic, purple and green neon accents, flat digital art style."
+  },
+  {
+    rank: "#2",
+    name: "HyperLocal Pro — Flutter Service App",
+    desc: "Cross-platform Flutter app (Android/iOS/Web) with Firebase phone OTP auth, Google Maps GPS-based vendor discovery, real-time chat, Razorpay payments, glassmorphism UI, and role-based customer/vendor dashboards.",
+    tags: [["Flutter/Dart","tag-dart"],["Firebase","tag-auto"],["Google Maps","tag-ts"],["Razorpay","tag-saas"]],
+    link: "https://github.com/Prakash-Ramakrishnan110/Myapp-hyper-local",
+    prompt: "A sleek mobile app UI with glassmorphism cards showing local service vendors on a GPS map, warm gradient background, split-screen showing customer booking a service and vendor accepting, modern flat illustration style."
+  },
+  {
+    rank: "#3",
+    name: "WhatsApp Automation — n8n Workflow",
+    desc: "Production-ready n8n automation workflow (JSON) for routing WhatsApp messages, triggering responses based on keywords, and integrating with external services — no-code/low-code automation pipeline.",
+    tags: [["n8n","tag-n8n"],["Automation","tag-auto"],["WhatsApp API","tag-saas"]],
+    link: "https://github.com/Prakash-Ramakrishnan110/WhatsApp-Automation-n8n",
+    prompt: "A glowing n8n workflow diagram with interconnected nodes representing WhatsApp message flows, green chat bubbles moving along automation pipelines, dark background with soft blue and green neon node connections, clean digital illustration."
+  },
+  {
+    rank: "#4",
+    name: "Automatic Message Sender",
+    desc: "Python-based tool for scheduling and auto-sending WhatsApp messages programmatically. Useful for reminders, bulk notifications, and marketing automation without a full SaaS stack.",
+    tags: [["Python","tag-py"],["Automation","tag-auto"],["WhatsApp","tag-saas"]],
+    link: "https://github.com/Prakash-Ramakrishnan110/Automatic-Message-Sender",
+    prompt: "A Python script visualization with animated message envelopes flying out of a terminal window into a WhatsApp interface, minimalist flat design, green and white color palette, subtle code background texture."
+  },
+  {
+    rank: "#5",
+    name: "Prakash Portfolio",
+    desc: "Personal developer portfolio website built with CSS and HTML, showcasing skills, projects, and contact. Deployed live at prakash-portfolio-alpha.vercel.app.",
+    tags: [["CSS","tag-html"],["HTML","tag-html"],["Portfolio","tag-n8n"]],
+    link: "https://github.com/Prakash-Ramakrishnan110/Prakash-Portfolio",
+    prompt: "A modern developer portfolio website mockup with a dark hero section, animated code editor, floating project cards, clean typography, Tamil Nadu cultural motifs subtly blended into a tech aesthetic, gradient purple and teal accents."
+  },
+  {
+    rank: "#6",
+    name: "CA Project",
+    desc: "Web-based project built with HTML covering a structured domain (likely Computer Architecture or a Client Application). Demonstrates structured front-end development skills.",
+    tags: [["HTML","tag-html"],["Web","tag-n8n"]],
+    link: "https://github.com/Prakash-Ramakrishnan110/CA-project",
+    prompt: "A clean educational web app interface with structured diagrams and information panels, white and blue color scheme, flat icons representing computer architecture components, minimal modern design."
+  },
+  {
+    rank: "#7",
+    name: "AI Agent / Automation Pipeline",
+    desc: "Repository exploring AI-powered agent workflows — connecting LLMs with automation tools to build intelligent task-handling pipelines.",
+    tags: [["AI","tag-ai"],["Automation","tag-auto"],["LLM","tag-saas"]],
+    link: "https://github.com/Prakash-Ramakrishnan110",
+    prompt: "A futuristic AI agent orchestration diagram with glowing neural network nodes, task pipeline arrows, robot avatar dispatching automated subtasks, purple and cyan digital art style, dark background."
+  },
+  {
+    rank: "#8",
+    name: "Hyper-Local Business Listing",
+    desc: "Static HTML/CSS project for listing local businesses with location-based filtering — foundational version of the full HyperLocal Pro Flutter app.",
+    tags: [["HTML","tag-html"],["CSS","tag-n8n"],["Local Search","tag-auto"]],
+    link: "https://github.com/Prakash-Ramakrishnan110",
+    prompt: "A local business directory web page design with map pins, category filter cards, warm earthy tones and orange accents, friendly flat illustration of a small-town marketplace with shops and service icons."
+  },
+  {
+    rank: "#9",
+    name: "WhatsApp Bulk Sender Tool",
+    desc: "Python/web tool for sending bulk WhatsApp messages using contact lists, supporting template messages and delivery status tracking for small businesses.",
+    tags: [["Python","tag-py"],["Bulk Messaging","tag-auto"],["WhatsApp","tag-saas"]],
+    link: "https://github.com/Prakash-Ramakrishnan110",
+    prompt: "A dashboard showing bulk message broadcast metrics — delivery rates, read receipts, contact list management, WhatsApp green on dark background, clean SaaS analytics UI flat illustration."
+  },
+  {
+    rank: "#10",
+    name: "UI/UX Component Library",
+    desc: "A collection of reusable front-end UI components, forms, and layout patterns built with HTML/CSS — design system building blocks for future projects.",
+    tags: [["HTML","tag-html"],["CSS","tag-n8n"],["UI/UX","tag-ai"]],
+    link: "https://github.com/Prakash-Ramakrishnan110",
+    prompt: "A component library showcase with rows of UI elements — buttons, cards, inputs, modals — floating on a light grid background, minimal pastel color palette, design system aesthetic, clean flat layout."
+  }
+];
+
+const container = document.getElementById('cards');
+projects.forEach((p, i) => {
+  const card = document.createElement('div');
+  card.className = 'card';
+  card.innerHTML = `
+    <div class="card-top">
+      <div class="card-title">${p.name}</div>
+      <span class="rank">${p.rank}</span>
+    </div>
+    <div class="card-desc">${p.desc}</div>
+    <div class="tags">${p.tags.map(([t,c])=>`<span class="tag ${c}">${t}</span>`).join('')}</div>
+    <div class="card-footer">
+      <a class="github-link" href="${p.link}" target="_blank">
+        <svg width="13" height="13" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+        View repo
+      </a>
+      <button class="img-prompt-btn" onclick="togglePrompt(${i})">🎨 Image prompt</button>
+    </div>
+    <div class="prompt-box" id="prompt-${i}">
+      <div class="prompt-label">Image generation prompt</div>
+      ${p.prompt}
+    </div>
+  `;
+  container.appendChild(card);
+});
+
+function togglePrompt(i) {
+  const box = document.getElementById('prompt-'+i);
+  box.classList.toggle('show');
+}
+</script>

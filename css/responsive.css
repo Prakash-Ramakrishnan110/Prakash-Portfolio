@@ -1,0 +1,416 @@
+/* Comprehensive Responsive Overrides for Prakash Portfolio */
+
+/* Extra Small Devices (320px - 575px) */
+@media (max-width: 575.98px) {
+    /* Navigation */
+    .ftco-navbar-light .navbar-brand {
+        font-size: 18px !important;
+        padding-left: 15px;
+    }
+    
+    .navbar-toggler {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+    
+    .navbar-nav {
+        background: rgba(0, 0, 0, 0.95);
+        padding: 20px;
+        border-radius: 0 0 10px 10px;
+        text-align: center !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+    
+    .navbar-nav .nav-link {
+        padding: 12px 0 !important;
+        font-size: 16px !important;
+    }
+
+    /* Hero Section - Complete redesign for mobile */
+    .hero {
+        min-height: 100vh !important;
+    }
+    
+    .hero .slider-item {
+        min-height: 100vh !important;
+    }
+    
+    .hero .row {
+        flex-direction: column !important;
+    }
+    
+    .hero .one-third.img {
+        order: 2 !important;
+        height: 40vh !important;
+        min-height: 300px !important;
+    }
+    
+    .hero .one-forth {
+        order: 1 !important;
+        text-align: center !important;
+        padding: 60px 20px !important;
+    }
+    
+    .hero .slider-text h1 {
+        font-size: 32px !important;
+        line-height: 1.1 !important;
+        margin-bottom: 20px !important;
+    }
+
+    .hero .slider-text h2 {
+        font-size: 18px !important;
+        margin-bottom: 25px !important;
+    }
+
+    .hero .slider-text .subheading {
+        font-size: 11px !important;
+        letter-spacing: 1px !important;
+        margin-bottom: 15px !important;
+    }
+
+    .hero .btn {
+        padding: 12px 20px !important;
+        font-size: 10px !important;
+        margin: 5px !important;
+        display: inline-block;
+    }
+
+    .hero .navbar-nav {
+        padding: 15px 25px !important;
+        margin: 0 !important;
+        text-align: center !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    /* Section Headings */
+    .heading-section h2 {
+        font-size: 24px !important;
+        line-height: 1.3 !important;
+    }
+
+    .heading-section .big {
+        font-size: 40px !important;
+    }
+
+    /* About Section */
+    .ftco-about .row {
+        flex-direction: column !important;
+    }
+    
+    .ftco-about .col-md-6 {
+        width: 100% !important;
+        margin-bottom: 30px;
+    }
+    
+    .ftco-about .img-about {
+        height: 300px !important;
+    }
+    
+    .about-info li {
+        font-size: 14px !important;
+        padding: 8px 0 !important;
+    }
+
+    /* Resume Section */
+    .resume-wrap {
+        padding: 20px !important;
+        margin-bottom: 20px !important;
+    }
+
+    .resume-wrap h2 {
+        font-size: 18px !important;
+    }
+
+    .resume-wrap .date {
+        font-size: 13px !important;
+    }
+    
+    .resume-wrap .position {
+        font-size: 14px !important;
+    }
+
+    /* Services Section */
+    .services-1 {
+        padding: 30px 20px !important;
+        margin-bottom: 20px;
+    }
+    
+    .services-1 .icon {
+        font-size: 40px !important;
+        margin-bottom: 15px;
+    }
+    
+    .services-1 h3 {
+        font-size: 18px !important;
+    }
+
+    /* Skills Section */
+    .progress-wrap {
+        margin-bottom: 25px;
+    }
+    
+    .progress-wrap h3 {
+        font-size: 14px !important;
+        margin-bottom: 10px;
+    }
+
+    /* Project Cards - Complete mobile redesign */
+    .project-card {
+        padding: 20px !important;
+        min-height: auto !important;
+        height: auto !important;
+        margin-bottom: 20px;
+    }
+    
+    .project-card .rank-badge {
+        top: 15px;
+        right: 15px;
+        font-size: 10px;
+        padding: 2px 8px;
+    }
+
+    .project-card h3 {
+        font-size: 16px !important;
+        margin-bottom: 15px;
+        margin-top: 10px;
+    }
+
+    .project-card p {
+        font-size: 13px !important;
+        line-height: 1.6 !important;
+        margin-bottom: 20px;
+    }
+
+    .project-card .tech-tags {
+        margin-bottom: 20px;
+    }
+    
+    .tech-tag {
+        font-size: 9px !important;
+        padding: 3px 8px !important;
+    }
+
+    .github-btn {
+        font-size: 12px !important;
+        padding: 8px 15px !important;
+    }
+
+    /* Blog Section */
+    .blog-entry {
+        margin-bottom: 30px;
+    }
+    
+    .blog-entry .block-20 {
+        height: 200px !important;
+    }
+    
+    .blog-entry h3 {
+        font-size: 16px !important;
+    }
+    
+    .blog-entry .meta {
+        font-size: 12px !important;
+    }
+
+    /* Contact Section */
+    .contact-info {
+        margin-bottom: 20px;
+    }
+
+    /* General Spacing */
+    .ftco-section {
+        padding: 40px 0 !important;
+    }
+    
+    .container {
+        padding: 0 15px;
+    }
+}
+
+/* Small Devices (576px - 767px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    /* Navigation */
+    .ftco-navbar-light .navbar-brand {
+        font-size: 20px !important;
+    }
+
+    /* Hero Section */
+    .hero .slider-text h1 {
+        font-size: 36px !important;
+    }
+
+    .hero .slider-text h2 {
+        font-size: 20px !important;
+    }
+
+    /* Section Headings */
+    .heading-section h2 {
+        font-size: 26px !important;
+    }
+
+    .heading-section .big {
+        font-size: 45px !important;
+    }
+
+    /* Project Cards */
+    .project-card {
+        padding: 25px !important;
+        min-height: 400px !important;
+    }
+    
+    .project-card h3 {
+        font-size: 18px !important;
+    }
+
+    .project-card p {
+        font-size: 14px !important;
+    }
+
+    /* General Spacing */
+    .ftco-section {
+        padding: 50px 0 !important;
+    }
+}
+
+/* Medium Devices (768px - 991px) - Tablets */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    /* Navigation */
+    .ftco-navbar-light .navbar-brand {
+        font-size: 22px !important;
+    }
+
+    /* Hero Section */
+    .hero .slider-text h1 {
+        font-size: 45px !important;
+        line-height: 1.2 !important;
+    }
+
+    .hero .slider-text h2 {
+        font-size: 22px !important;
+    }
+
+    .hero .one-third.img {
+        height: 60vh !important;
+    }
+
+    /* Section Headings */
+    .heading-section h2 {
+        font-size: 32px !important;
+    }
+
+    .heading-section .big {
+        font-size: 55px !important;
+    }
+
+    /* About Section */
+    .ftco-about .img-about {
+        height: 400px !important;
+    }
+
+    /* Project Cards */
+    .project-card {
+        padding: 30px !important;
+        min-height: 450px !important;
+    }
+    
+    .project-card h3 {
+        font-size: 20px !important;
+    }
+
+    .project-card p {
+        font-size: 15px !important;
+    }
+
+    /* Services */
+    .services-1 {
+        padding: 35px 25px !important;
+    }
+
+    /* General Spacing */
+    .ftco-section {
+        padding: 60px 0 !important;
+    }
+}
+
+/* Large Devices (992px - 1199px) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    /* Hero Section */
+    .hero .slider-text h1 {
+        font-size: 55px !important;
+    }
+
+    .hero .slider-text h2 {
+        font-size: 26px !important;
+    }
+
+    /* Section Headings */
+    .heading-section h2 {
+        font-size: 38px !important;
+    }
+
+    .heading-section .big {
+        font-size: 65px !important;
+    }
+
+    /* Project Cards */
+    .project-card {
+        min-height: 480px !important;
+    }
+}
+
+/* Extra Large Devices (1200px and up) */
+@media (min-width: 1200px) {
+    .project-card {
+        min-height: 500px !important;
+    }
+}
+
+/* Landscape orientation fixes for mobile */
+@media (max-width: 767.98px) and (orientation: landscape) {
+    .hero {
+        min-height: auto !important;
+        padding: 50px 0 !important;
+    }
+    
+    .hero .one-third.img {
+        height: 50vh !important;
+        min-height: 250px !important;
+    }
+    
+    .hero .one-forth {
+        padding: 30px 20px !important;
+    }
+}
+
+/* Fix for overlapping navbar on mobile browsers */
+@media (max-width: 991.98px) {
+    .ftco-navbar-light.scrolled {
+        background: rgba(0, 0, 0, 0.95) !important;
+        backdrop-filter: blur(10px);
+    }
+    
+    .site-navbar-target {
+        padding-top: 70px;
+    }
+}
+
+/* Touch device fixes */
+@media (hover: none) and (pointer: coarse) {
+    .project-card:hover {
+        transform: none;
+    }
+    
+    .services-1:hover {
+        transform: none;
+    }
+    
+    .github-btn:hover {
+        transform: none;
+    }
+}
