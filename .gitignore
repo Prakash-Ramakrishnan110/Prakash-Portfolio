@@ -1,2 +1,7 @@
-
-*.pdf
+.DS_Store
+Thumbs.db
+node_modules/
+*.log
+.vscode/
+.idea/
+From_Code_to_Innovation*.pdf
