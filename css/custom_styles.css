@@ -491,10 +491,6 @@
     animation-direction: reverse;
 }
 
-.marquee-container:hover {
-    animation-play-state: paused;
-}
-
 .marquee-container:hover .marquee-item:not(:hover) {
     opacity: 0.2;
     transform: scale(0.95);
@@ -644,10 +640,6 @@
 
 .services-marquee-track.reverse {
     animation-direction: reverse;
-}
-
-.services-marquee-track:hover {
-    animation-play-state: paused;
 }
 
 .service-mini-card {
