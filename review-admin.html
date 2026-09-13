@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Review Admin | Prakash Ramakrishnan</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#ffbd39">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/custom_styles.css">
+
+    <!-- Supabase JS Client -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    
+    <style>
+        .admin-card {
+            background: #111;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .admin-card img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .status-badge {
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        .status-pending { background: #ffbd39; color: #000; }
+        .status-approved { background: #28a745; color: #fff; }
+        .status-rejected { background: #dc3545; color: #fff; }
+        
+        .admin-filters {
+            margin-bottom: 30px;
+        }
+        .admin-filters button {
+            background: transparent;
+            border: 1px solid #ffbd39;
+            color: #ffbd39;
+            padding: 8px 16px;
+            margin-right: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .admin-filters button.active {
+            background: #ffbd39;
+            color: #000;
+        }
+    </style>
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">Prakash Admin</a>
+          <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="oi oi-menu"></span> Menu
+          </button>
+          <div class="collapse navbar-collapse" id="ftco-nav">
+            <ul class="navbar-nav nav ml-auto">
+              <li class="nav-item"><a href="#" id="logoutBtn" class="nav-link" style="display:none;"><span>Logout</span></a></li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+
+    <section class="ftco-section" id="auth-section" style="padding-top: 150px; display: none;">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-6">
+            <div class="review-form-container p-4 p-md-5 bg-dark">
+                <h3 class="mb-4">Admin Login</h3>
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary py-3 px-5">Login</button>
+                    </div>
+                    <div id="loginMessage" class="mt-3 text-danger" style="display: none;"></div>
+                </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section" id="dashboard-section" style="padding-top: 150px; display: none;">
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col-md-12">
+                    <h2 class="mb-4">Testimonials Dashboard</h2>
+                    <div class="admin-filters">
+                        <button class="active" onclick="filterReviews('all')">All</button>
+                        <button onclick="filterReviews('pending')">Pending</button>
+                        <button onclick="filterReviews('approved')">Approved</button>
+                        <button onclick="filterReviews('rejected')">Rejected</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row" id="reviewsContainer">
+                <!-- Reviews injected here -->
+                <div class="col-md-12"><p>Loading...</p></div>
+            </div>
+        </div>
+    </section>
+
+  <script>
+    // ---------------------------------------------------------
+    // IMPORTANT: REPLACE THESE WITH YOUR ACTUAL SUPABASE KEYS
+    // ---------------------------------------------------------
+    const SUPABASE_URL = 'https://jcbpbgarnjawhithruay.supabase.co';
+    const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImpjYnBiZ2Fybmphd2hpdGhydWF5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODkyMTEyNjYsImV4cCI6MjEwNDc4NzI2Nn0.uKJVMFCpgru2zH3RALdvZU_wm2kFNQppind_AL9OYu4';
+    // ---------------------------------------------------------
+
+    const supabase = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+    
+    let allReviews = [];
+
+    // Check Auth State on Load
+    async function checkAuth() {
+        const { data: { session } } = await supabase.auth.getSession();
+        if (session) {
+            document.getElementById('auth-section').style.display = 'none';
+            document.getElementById('dashboard-section').style.display = 'block';
+            document.getElementById('logoutBtn').style.display = 'block';
+            loadReviews();
+        } else {
+            document.getElementById('auth-section').style.display = 'block';
+            document.getElementById('dashboard-section').style.display = 'none';
+            document.getElementById('logoutBtn').style.display = 'none';
+        }
+    }
+
+    // Login Form Submit
+    document.getElementById('loginForm').addEventListener('submit', async function(e) {
+        e.preventDefault();
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+        const msg = document.getElementById('loginMessage');
+        
+        const { data, error } = await supabase.auth.signInWithPassword({ email, password });
+        
+        if (error) {
+            msg.innerHTML = error.message;
+            msg.style.display = 'block';
+        } else {
+            msg.style.display = 'none';
+            checkAuth();
+        }
+    });
+
+    // Logout
+    document.getElementById('logoutBtn').addEventListener('click', async function(e) {
+        e.preventDefault();
+        await supabase.auth.signOut();
+        checkAuth();
+    });
+
+    // Fetch and Display Reviews
+    async function loadReviews() {
+        const { data, error } = await supabase
+            .from('testimonials')
+            .select('*')
+            .order('created_at', { ascending: false });
+            
+        if (error) {
+            console.error('Error fetching reviews:', error);
+            document.getElementById('reviewsContainer').innerHTML = '<p class="text-danger">Failed to load testimonials.</p>';
+            return;
+        }
+        
+        allReviews = data;
+        renderReviews(allReviews);
+    }
+
+    function renderReviews(reviews) {
+        const container = document.getElementById('reviewsContainer');
+        container.innerHTML = '';
+        
+        if (reviews.length === 0) {
+            container.innerHTML = '<p>No testimonials found.</p>';
+            return;
+        }
+        
+        reviews.forEach(review => {
+            const date = new Date(review.created_at).toLocaleDateString();
+            const defaultPhoto = 'images/avatar_placeholder.png'; // Make sure you have this or it will show broken img
+            
+            const card = document.createElement('div');
+            card.className = 'col-md-12';
+            card.innerHTML = `
+                <div class="admin-card">
+                    <div class="d-flex justify-content-between align-items-start mb-3">
+                        <div class="d-flex align-items-center">
+                            <img src="${review.photo_url || defaultPhoto}" alt="Photo" class="mr-3" onerror="this.src='images/person_1.jpg'">
+                            <div>
+                                <h5 class="mb-0 text-white">${review.name}</h5>
+                                <p class="mb-0 text-muted" style="font-size: 14px;">${review.designation} at ${review.organization}</p>
+                            </div>
+                        </div>
+                        <span class="status-badge status-${review.status}">${review.status.toUpperCase()}</span>
+                    </div>
+                    <p><strong>Review:</strong> ${review.overall_feedback}</p>
+                    ${review.linkedin_url ? `<p><strong>LinkedIn:</strong> <a href="${review.linkedin_url}" target="_blank">${review.linkedin_url}</a></p>` : ''}
+                    <p class="text-muted" style="font-size: 12px;">Submitted on: ${date} | Display Permission: ${review.display_permission ? 'Yes' : 'No'}</p>
+                    
+                    <div class="mt-3 border-top pt-3 border-secondary">
+                        <button class="btn btn-sm btn-success mr-2" onclick="updateStatus('${review.id}', 'approved')">Approve</button>
+                        <button class="btn btn-sm btn-warning mr-2" onclick="updateStatus('${review.id}', 'rejected')">Reject</button>
+                        <button class="btn btn-sm btn-danger float-right" onclick="deleteReview('${review.id}')">Delete</button>
+                    </div>
+                </div>
+            `;
+            container.appendChild(card);
+        });
+    }
+
+    window.filterReviews = function(status) {
+        document.querySelectorAll('.admin-filters button').forEach(btn => btn.classList.remove('active'));
+        event.target.classList.add('active');
+        
+        if (status === 'all') {
+            renderReviews(allReviews);
+        } else {
+            const filtered = allReviews.filter(r => r.status === status);
+            renderReviews(filtered);
+        }
+    }
+
+    window.updateStatus = async function(id, newStatus) {
+        const { error } = await supabase
+            .from('testimonials')
+            .update({ status: newStatus })
+            .eq('id', id);
+            
+        if (error) {
+            alert('Error updating status: ' + error.message);
+        } else {
+            loadReviews(); // Refresh
+        }
+    }
+
+    window.deleteReview = async function(id) {
+        if (!confirm('Are you sure you want to permanently delete this testimonial?')) return;
+        
+        // Find review to get photo URL to delete from storage as well
+        const review = allReviews.find(r => r.id === id);
+        
+        if (review && review.photo_url) {
+            try {
+                // Extract filename from URL. Example URL: .../testimonial-photos/filename.jpg
+                const urlParts = review.photo_url.split('/');
+                const filename = urlParts[urlParts.length - 1];
+                await supabase.storage.from('testimonial-photos').remove([filename]);
+            } catch (e) {
+                console.error('Could not delete photo:', e);
+            }
+        }
+        
+        const { error } = await supabase
+            .from('testimonials')
+            .delete()
+            .eq('id', id);
+            
+        if (error) {
+            alert('Error deleting: ' + error.message);
+        } else {
+            loadReviews(); // Refresh
+        }
+    }
+
+    // Initialize
+    checkAuth();
+  </script>
+  </body>
+</html>
