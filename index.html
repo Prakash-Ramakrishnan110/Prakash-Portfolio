@@ -4,7 +4,8 @@
     <title>Prakash Ramakrishnan | AI & Software Developer | Author</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Prakash Ramakrishnan is an AI and software developer, author of From Code to Innovation, and technology product builder.">
+    <meta name="description" content="Prakash Ramakrishnan is an AI and software developer, researcher specializing in machine learning and fairness audits, and author of 'From Code to Innovation'.">
+    <meta name="keywords" content="Prakash Ramakrishnan, AI Developer, Software Engineer, Machine Learning Research, Automated Assignment Evaluation, Fairness Audit, Tech Author">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta name="author" content="Prakash Ramakrishnan">
     <meta name="theme-color" content="#ffbd39">
@@ -18,7 +19,7 @@
     <meta property="og:site_name" content="Prakash Ramakrishnan">
     <meta property="og:url" content="https://prakash-portfolio-alpha.vercel.app/">
     <meta property="og:title" content="Prakash Ramakrishnan | AI & Software Developer | Author">
-    <meta property="og:description" content="Prakash Ramakrishnan is an AI and software developer, author of From Code to Innovation, and technology product builder.">
+    <meta property="og:description" content="Prakash Ramakrishnan is an AI and software developer, researcher specializing in machine learning and fairness audits, and author of 'From Code to Innovation'.">
     <meta property="og:image" content="https://prakash-portfolio-alpha.vercel.app/images/bg_12.png">
     <meta property="og:locale" content="en_US">
 
@@ -26,7 +27,7 @@
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://prakash-portfolio-alpha.vercel.app/">
     <meta property="twitter:title" content="Prakash Ramakrishnan | AI & Software Developer | Author">
-    <meta property="twitter:description" content="Prakash Ramakrishnan is an AI and software developer, author of From Code to Innovation, and technology product builder.">
+    <meta property="twitter:description" content="Prakash Ramakrishnan is an AI and software developer, researcher specializing in machine learning and fairness audits, and author of 'From Code to Innovation'.">
     <meta property="twitter:image" content="https://prakash-portfolio-alpha.vercel.app/images/bg_12.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -80,9 +81,30 @@
           "bookEdition": "First Edition",
           "datePublished": "2026",
           "url": "https://www.amazon.com/dp/B0HGQ47N2J"
+        },
+        {
+          "@type": "ScholarlyArticle",
+          "name": "SearchTrust ML: A Claim-Level Evaluation Protocol",
+          "author": { "@id": "https://prakash-portfolio-alpha.vercel.app/#person" },
+          "url": "https://zenodo.org/records/22733569"
+        },
+        {
+          "@type": "ScholarlyArticle",
+          "name": "Automated Fairness Audit and Bias Mitigation Pipeline for Loan Approval Models",
+          "author": { "@id": "https://prakash-portfolio-alpha.vercel.app/#person" },
+          "url": "https://zenodo.org/records/22733708"
         }
       ]
     }
+    </script>
+    <script>
+      // Apply theme early to prevent flickering
+      const currentTheme = localStorage.getItem('theme');
+      if (currentTheme === 'light') {
+        document.documentElement.classList.add('light-mode');
+      } else if (currentTheme === null) {
+        // Default to dark, you can change this if needed
+      }
     </script>
   </head>
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
@@ -90,9 +112,12 @@
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
 	    <div class="container">
 	      <a class="navbar-brand" href="index.html">Prakash</a>
-	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-	        <span class="oi oi-menu"></span> Menu
-	      </button>
+	      
+	      <div class="d-flex align-items-center d-lg-none">
+	        <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	          <span class="oi oi-menu"></span> Menu
+	        </button>
+	      </div>
 
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav nav ml-auto">
@@ -106,6 +131,8 @@
 	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Experience</span></a></li>
 	          <li class="nav-item"><a href="#services-section" class="nav-link"><span>Services</span></a></li>
 	          <li class="nav-item cta-btn"><a href="#contact-section" class="nav-link"><span>Hire Me</span></a></li>
+	          <li class="nav-item d-none d-lg-flex align-items-center ml-lg-3">
+	          </li>
 	        </ul>
 	      </div>
 	    </div>
@@ -459,7 +486,7 @@
 
 					<div class="project-card ftco-animate">
 						<span class="rank-badge">#2</span>
-						<h3><a href="https://github.com/Prakash-Ramakrishnan110/WAutoFlow---WhatsApp-Automation-SaaS-">WAutoFlow — WhatsApp Automation SaaS</a></h3>
+						<h3><a href="https://github.com/Prakash-Ramakrishnan110/WAutoFlow---WhatsApp-Automation-SaaS-" target="_blank">WAutoFlow — WhatsApp Automation SaaS</a></h3>
 						<p>Full-stack B2B SaaS platform for automating business WhatsApp messaging via the official Meta Cloud API. Includes JWT auth, role-based access, Stripe/Razorpay payments, event-based triggers, and analytics dashboard.</p>
 						<div class="tech-tags">
 							<span class="tech-tag tag-ts">TypeScript</span>
@@ -1309,7 +1336,7 @@
   <script>
     document.addEventListener("DOMContentLoaded", function() {
       if(document.getElementById("home-section")) {
-        VANTA.NET({
+        window.vantaEffect = VANTA.NET({
           el: "#home-section",
           mouseControls: true,
           touchControls: true,
@@ -1350,6 +1377,11 @@
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
   </a>
 
+  <!-- Floating Theme Toggle Button -->
+  <button class="floating-theme-toggle" aria-label="Toggle Theme" title="Toggle Light/Dark Mode">
+    <span class="theme-icon">🌙</span>
+  </button>
+
   <script>
     // Copy to clipboard helper
     function copyToClipboard(text, btnElement) {
@@ -1378,6 +1410,52 @@
           btn.classList.remove('visible');
         }
       }
+    });
+
+    // Theme Toggle Logic
+    document.addEventListener('DOMContentLoaded', function() {
+      const themeToggleBtns = document.querySelectorAll('.floating-theme-toggle');
+      const themeIcons = document.querySelectorAll('.theme-icon');
+      
+      function updateToggleUI() {
+        const isLight = document.documentElement.classList.contains('light-mode');
+        
+        themeIcons.forEach(icon => {
+          icon.textContent = isLight ? '☀️' : '🌙';
+        });
+
+        if (window.vantaEffect) {
+          if (isLight) {
+            window.vantaEffect.setOptions({
+              color: 0xffbd39, // Keep yellow lines/dots
+              backgroundColor: 0x000000, // Underlying color for WebGL clear
+              backgroundAlpha: 0.0 // Make WebGL canvas transparent!
+            });
+          } else {
+            window.vantaEffect.setOptions({
+              color: 0xffbd39, // Theme yellow dots
+              backgroundColor: 0x000000, // Dark background
+              backgroundAlpha: 1.0 // Opaque
+            });
+          }
+        }
+      }
+      
+      updateToggleUI();
+
+      themeToggleBtns.forEach(btn => {
+        btn.addEventListener('click', function(e) {
+          e.preventDefault(); // Prevent any form submission or link jumping
+          document.documentElement.classList.toggle('light-mode');
+          updateToggleUI();
+          
+          if (document.documentElement.classList.contains('light-mode')) {
+            localStorage.setItem('theme', 'light');
+          } else {
+            localStorage.setItem('theme', 'dark');
+          }
+        });
+      });
     });
   </script>
 

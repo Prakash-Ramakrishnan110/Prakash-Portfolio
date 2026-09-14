@@ -857,6 +857,10 @@
     color: #ffbd39 !important;
 }
 
+.ftco-navbar-light.scrolled .navbar-nav .nav-item.active > a {
+    color: #ffbd39 !important;
+}
+
 .ftco-navbar-light.scrolled .navbar-brand,
 .ftco-navbar-light.scrolled.awake .navbar-brand {
     color: #ffffff !important;
@@ -1870,6 +1874,268 @@
         padding: 24px;
     }
 }
+
+/* ==========================================================================
+   LIGHT MODE OVERRIDES
+   ========================================================================== */
+html.light-mode body {
+    background-color: #f8f9fa !important;
+    color: #333333 !important;
+}
+
+html.light-mode h1, 
+html.light-mode h2, 
+html.light-mode h3, 
+html.light-mode h4, 
+html.light-mode h5, 
+html.light-mode h6 {
+    color: #111111 !important;
+}
+
+html.light-mode .heading-section h1.big,
+html.light-mode .heading-section h1.big-2 {
+    color: rgba(0, 0, 0, 0.08) !important;
+}
+
+html.light-mode .heading-section .subheading {
+    color: #666666 !important;
+    font-weight: 600 !important;
+}
+
+html.light-mode p,
+html.light-mode span,
+html.light-mode .about-info li span:first-child {
+    color: #555555 !important;
+}
+
+html.light-mode #ftco-navbar.ftco-navbar-light {
+    background: transparent !important;
+}
+
+html.light-mode #ftco-navbar.ftco-navbar-light .navbar-nav > .nav-item > .nav-link,
+html.light-mode #ftco-navbar.ftco-navbar-light .navbar-brand {
+    color: #111111 !important;
+}
+
+html.light-mode #ftco-navbar.ftco-navbar-light .navbar-nav > .nav-item.active > .nav-link,
+html.light-mode #ftco-navbar.ftco-navbar-light .navbar-nav > .nav-item > .nav-link:hover,
+html.light-mode #ftco-navbar.ftco-navbar-light .navbar-brand:hover {
+    color: #ffbd39 !important;
+}
+
+html.light-mode #ftco-navbar.ftco-navbar-light.scrolled {
+    background: #ffffff !important;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05) !important;
+}
+
+html.light-mode #ftco-navbar.ftco-navbar-light.scrolled .navbar-nav > .nav-item > .nav-link {
+    color: #333333 !important;
+}
+
+html.light-mode #ftco-navbar.ftco-navbar-light.scrolled .navbar-brand {
+    color: #111111 !important;
+}
+
+/* Cards & Containers */
+html.light-mode .project-card,
+html.light-mode .philosophy-card,
+html.light-mode .resume-wrap,
+html.light-mode .service-mini-card,
+html.light-mode .about-glass-card {
+    background: #ffffff !important;
+    border: 1px solid rgba(0, 0, 0, 0.1) !important;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05) !important;
+}
+
+html.light-mode .project-card h3,
+html.light-mode .philosophy-card h3,
+html.light-mode .resume-wrap h2,
+html.light-mode .service-mini-card h3,
+html.light-mode .about-glass-card .glass-title {
+    color: #111111 !important;
+}
+
+html.light-mode .project-card p,
+html.light-mode .philosophy-card p,
+html.light-mode .resume-wrap p,
+html.light-mode .about-glass-card .glass-subtitle {
+    color: #555555 !important;
+}
+
+/* Stats */
+html.light-mode .stat-item {
+    background: rgba(0, 0, 0, 0.05) !important;
+    border-color: rgba(0, 0, 0, 0.05) !important;
+}
+
+html.light-mode .stat-text {
+    color: #333333 !important;
+}
+
+/* Terminal Window */
+html.light-mode .terminal-window {
+    background: #ffffff !important;
+    border: 1px solid rgba(0, 0, 0, 0.1) !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1) !important;
+}
+
+html.light-mode .terminal-header {
+    background: #f1f1f1 !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+
+html.light-mode .terminal-title {
+    color: #555555 !important;
+}
+
+html.light-mode .terminal-body {
+    background: #ffffff !important;
+}
+
+html.light-mode .terminal-body .token.string { color: #22863a !important; }
+html.light-mode .terminal-body .token.key { color: #d73a49 !important; }
+html.light-mode .terminal-body .token.punctuation { color: #24292e !important; }
+
+/* AI Tech Stack Background */
+html.light-mode .ai-tech-stack {
+    background: #f8f9fa !important;
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.05) 1px, transparent 1px) !important;
+}
+
+/* Marquee / Auto-scroll tech logos */
+html.light-mode .marquee-category {
+    color: rgba(0, 0, 0, 0.5) !important;
+}
+html.light-mode .marquee-item span {
+    color: #333333 !important;
+}
+
+/* FAQ Accordion */
+html.light-mode .faq-accordion .card {
+    background: #ffffff !important;
+    border: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+html.light-mode .faq-accordion .btn-link {
+    color: #111111 !important;
+}
+html.light-mode .faq-accordion .card-body {
+    color: #555555 !important;
+}
+
+/* Footer & Other sections */
+html.light-mode .ftco-footer {
+    background: #f1f1f1 !important;
+    color: #555555 !important;
+}
+html.light-mode .ftco-footer h2 {
+    color: #111111 !important;
+}
+html.light-mode .ftco-footer .ftco-footer-widget ul li a {
+    color: #555555 !important;
+}
+html.light-mode .ftco-footer .ftco-footer-widget ul li a:hover {
+    color: #ffbd39 !important;
+}
+
+/* ==========================================================================
+   HERO SECTION LIGHT MODE OVERRIDES
+   ========================================================================== */
+html.light-mode #home-section {
+    background-color: #f8f9fa !important;
+}
+
+html.light-mode #home-section .slider-item {
+    background-color: transparent !important;
+}
+
+html.light-mode #home-section .slider-item .overlay,
+html.light-mode #home-section .hero-img-wrap .overlay {
+    display: none !important;
+}
+
+html.light-mode #home-section .subheading {
+    color: #111111 !important;
+}
+
+html.light-mode #home-section h1.mb-4,
+html.light-mode #home-section h2.mb-4 {
+    color: #111111 !important;
+}
+
+html.light-mode #home-section h1.mb-4 span {
+    color: #ffbd39 !important; /* Keep the accent yellow */
+}
+
+html.light-mode #home-section p {
+    color: #555555 !important;
+}
+
+html.light-mode .typing-text {
+    color: #111111 !important;
+}
+
+html.light-mode .status-text {
+    color: #333333 !important;
+}
+
+html.light-mode .status-badge-wrap {
+    background: rgba(0, 0, 0, 0.05) !important;
+    border: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+
+html.light-mode #home-section .hero-img-wrap {
+    background-blend-mode: normal !important;
+    background-color: transparent !important;
+}
+
+
+/* ==========================================================================
+   FLOATING THEME TOGGLE SWITCH
+   ========================================================================== */
+.floating-theme-toggle {
+    position: fixed;
+    bottom: 90px;
+    right: 30px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #ffbd39;
+    color: #111111;
+    z-index: 9999;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    outline: none;
+}
+.floating-theme-toggle:focus {
+    outline: none;
+}
+.floating-theme-toggle:hover {
+    transform: translateY(-5px);
+    background: #fff;
+    box-shadow: 0 15px 30px rgba(255, 255, 255, 0.4);
+}
+.floating-theme-toggle .theme-icon {
+    font-size: 20px;
+    line-height: 1;
+}
+
+html.light-mode .floating-theme-toggle {
+    background: #111111;
+    color: #ffffff;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+html.light-mode .floating-theme-toggle:hover {
+    background: #ffbd39;
+    color: #111111;
+}
+
 
 
 
