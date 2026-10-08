@@ -144,7 +144,7 @@
 	  
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
 	    <div class="container">
-	      <a class="navbar-brand" href="index.html">Prakash</a>
+	      <a class="navbar-brand" href="index.html">Prakash R</a>
 	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="oi oi-menu"></span> Menu
 	      </button>
@@ -613,17 +613,25 @@
 		<!-- Featured Achievement -->
 		<div class="row mb-5">
 			<div class="col-md-12">
-				<div class="resume-wrap ftco-animate d-md-flex align-items-center" style="background: rgba(255,189,57,0.05); border: 1px solid rgba(255,189,57,0.2); padding: 25px !important;">
-					<div class="achievement-logo mr-md-4 mb-3 mb-md-0" style="flex-shrink: 0; text-align: center;">
-						<div style="height: 70px; width: 70px; background: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto; border: 1px solid rgba(255,189,57,0.3); overflow: hidden;">
-							<img src="https://i.pinimg.com/736x/e1/6d/1c/e16d1c85fa9b70d8d3e3ba871627db20.jpg" alt="Naan Mudhalvan Logo" loading="lazy" style="height: 100%; width: 100%; object-fit: cover;">
-						</div>
+				<div class="resume-wrap ftco-animate d-md-flex align-items-center" style="background: rgba(255,189,57,0.05); border: 1px solid rgba(255,189,57,0.2); padding: 25px !important; position: relative; overflow: hidden;">
+                    <canvas id="confetti-canvas" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0;"></canvas>
+					<div class="achievement-logo mr-md-4 mb-3 mb-md-0" style="flex-shrink: 0; text-align: center; z-index: 1; display: flex; flex-direction: column; gap: 10px; align-items: center; background: #fff; padding: 15px; border-radius: 12px; border: 1px solid rgba(255,189,57,0.3);">
+                        <div style="display: flex; gap: 15px; align-items: center; justify-content: center; flex-wrap: wrap;">
+						    <img src="images/logo_1.png" alt="TN Govt Logo" loading="lazy" style="height: 60px; width: auto; object-fit: contain;">
+						    <img src="images/logo_2.png" alt="Naan Mudhalvan Logo" loading="lazy" style="height: 60px; width: auto; object-fit: contain;">
+                            <!-- Niral Thiruvizha Logo -->
+                            <img src="images/niral_logo.png" alt="Niral Thiruvizha Logo" loading="lazy" style="height: 60px; width: auto; object-fit: contain;">
+                        </div>
+                        <div style="font-size: 11px; font-weight: 700; color: #333; text-transform: uppercase; letter-spacing: 1px; margin-top: 5px;">Niral Thiruvizha 3.0</div>
 					</div>
-					<div class="achievement-text text-center text-md-left">
-						<span class="date" style="font-size: 16px; letter-spacing: 1px;">2025 – 2026</span>
-						<h2 style="font-size: 22px; font-weight: 700; margin-bottom: 8px; line-height: 1.3;">Top 500 Finalist – Naan Mudhalvan Niral Thiruvizha 3.0</h2>
+					<div class="achievement-text text-center text-md-left" style="z-index: 1;">
+						<span class="date" style="font-size: 16px; letter-spacing: 1px; color: #ffbd39; font-weight: 700;">2025 – 2026 &nbsp;&nbsp; TOP 100</span>
+						<h2 style="font-size: 22px; font-weight: 700; margin-bottom: 8px; line-height: 1.3;">Top 100 Finalist – Naan Mudhalvan Niral Thiruvizha 3.0</h2>
 						<span class="position" style="color: #fff; font-size: 13px; letter-spacing: 1px;">TNSDC, Government of Tamil Nadu</span>
-						<p class="mt-2 mb-0" style="font-size: 15px; color: rgba(255,255,255,0.8);">Recognized among the Top 500 teams across Tamil Nadu in the state-level innovation program for developing <strong style="color: #ffbd39;">GEOCOMMAND</strong>, an AI & GIS-based Government Land Monitoring and Encroachment Detection System.</p>
+						<p class="mt-2 mb-0" style="font-size: 15px; color: rgba(255,255,255,0.8);">Recognized among the Top 100 teams in Tamil Nadu! <strong>Team Fusion Engine</strong> developed <strong style="color: #ffbd39;">GEOCOMMAND</strong>, an innovative database and GIS-based mapping system designed to monitor real-time encroachment and ensure the protection of Government Land.</p>
+                        <div class="mt-3">
+                            <button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#geocommandModal" style="border-radius: 4px; padding: 8px 15px; font-weight: 600;">View GEOCOMMAND Case Study</button>
+                        </div>
 					</div>
 				</div>
 			</div>
@@ -1293,6 +1301,66 @@
     
   
 
+  <!-- GEOCOMMAND Case Study Modal -->
+  <div class="modal fade" id="geocommandModal" tabindex="-1" role="dialog" aria-labelledby="geocommandModalLabel" aria-hidden="true" style="z-index: 999999;">
+    <div class="modal-dialog modal-xl" role="document">
+      <div class="modal-content" style="background-color: rgba(20, 20, 20, 0.85); color: #fff; border: 1px solid #ffbd39; border-radius: 12px; overflow: hidden; box-shadow: 0 0 30px rgba(255,189,57,0.2); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);">
+        <div class="modal-header" style="border-bottom: 1px solid rgba(255,255,255,0.1); padding: 15px 20px; background: rgba(0,0,0,0.4); display: flex; align-items: flex-start; justify-content: space-between; gap: 15px;">
+          <h5 class="modal-title" id="geocommandModalLabel" style="color: #ffbd39; font-weight: 700; font-size: 20px; margin-bottom: 0; line-height: 1.3; flex: 1; word-break: break-word;">GEOCOMMAND: AI-Driven Land Protection</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color: #fff; opacity: 0.8; text-shadow: none; font-size: 28px; padding: 0; margin: 0; flex-shrink: 0; background: transparent; border: none; line-height: 1;">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body" style="padding: 20px 25px;">
+          <div class="row">
+            <div class="col-lg-6 mb-4 mb-lg-0 pr-lg-4">
+              <h6 style="color: #ffbd39; font-weight: 600; text-transform: uppercase; font-size: 14px; letter-spacing: 1px; margin-bottom: 8px;">The Core Problem</h6>
+              <p style="font-size: 14px; color: rgba(255,255,255,0.85); margin-bottom: 15px; line-height: 1.5;">Slow, resource-heavy manual surveillance made it difficult to protect government land. GEOCOMMAND solves this by utilizing AI-driven GIS to automatically monitor lands in real-time, stopping illegal structural encroachments before they become permanent.</p>
+              
+              <h6 style="color: #ffbd39; font-weight: 600; text-transform: uppercase; font-size: 14px; letter-spacing: 1px; margin-bottom: 8px;">Key Features</h6>
+              <ul style="font-size: 14px; color: rgba(255,255,255,0.85); padding-left: 20px; margin-bottom: 15px; line-height: 1.5;">
+                <li style="margin-bottom: 6px;"><strong style="color: #fff;">AI Encroachment Detection:</strong> Automatically analyzes temporal satellite imagery (before-and-after) to detect unauthorized new structures or land use shifts instantly.</li>
+                <li style="margin-bottom: 6px;"><strong style="color: #fff;">Real-Time Tactical Dashboard:</strong> Centralized command hub for administrators featuring interactive heatmaps, jurisdictional metrics, and live alerts.</li>
+                <li><strong style="color: #fff;">Field Officer Mobile App:</strong> Syncs seamlessly with the dashboard, sending instant mission orders to officers who can capture and upload high-fidelity, geotagged evidence.</li>
+              </ul>
+
+              <h6 style="color: #ffbd39; font-weight: 600; text-transform: uppercase; font-size: 14px; letter-spacing: 1px; margin-bottom: 8px;">Technology Stack</h6>
+              <div class="tech-stack-badges" style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 15px;">
+                <span class="badge" style="background: rgba(255,255,255,0.05); padding: 8px 10px; font-weight: 500; font-size: 12px; border: 1px solid rgba(255,255,255,0.2); color: #ccc;">React 19 (Vite)</span>
+                <span class="badge" style="background: rgba(255,255,255,0.05); padding: 8px 10px; font-weight: 500; font-size: 12px; border: 1px solid rgba(255,255,255,0.2); color: #ccc;">Tailwind CSS v4</span>
+                <span class="badge" style="background: rgba(255,255,255,0.05); padding: 8px 10px; font-weight: 500; font-size: 12px; border: 1px solid rgba(255,255,255,0.2); color: #ccc;">React-Leaflet</span>
+                <span class="badge" style="background: rgba(255,255,255,0.05); padding: 8px 10px; font-weight: 500; font-size: 12px; border: 1px solid rgba(255,255,255,0.2); color: #ccc;">Recharts</span>
+                <span class="badge" style="background: rgba(255,255,255,0.05); padding: 8px 10px; font-weight: 500; font-size: 12px; border: 1px solid rgba(255,255,255,0.2); color: #ccc;">Django 6.0</span>
+                <span class="badge" style="background: rgba(255,255,255,0.05); padding: 8px 10px; font-weight: 500; font-size: 12px; border: 1px solid rgba(255,255,255,0.2); color: #ccc;">DRF & DRF-GIS</span>
+                <span class="badge" style="background: rgba(255,255,255,0.05); padding: 8px 10px; font-weight: 500; font-size: 12px; border: 1px solid rgba(255,255,255,0.2); color: #ccc;">PostgreSQL & PostGIS</span>
+                <span class="badge" style="background: rgba(255,255,255,0.05); padding: 8px 10px; font-weight: 500; font-size: 12px; border: 1px solid rgba(255,255,255,0.2); color: #ccc;">Docker & Compose</span>
+              </div>
+
+              <h6 style="color: #ffbd39; font-weight: 600; text-transform: uppercase; font-size: 14px; letter-spacing: 1px; margin-bottom: 8px;">My Role & Impact</h6>
+              <ul style="font-size: 14px; color: rgba(255,255,255,0.85); padding-left: 20px; margin-bottom: 0; line-height: 1.5;">
+                <li style="margin-bottom: 6px;"><strong style="color: #fff;">Full-Stack Leadership:</strong> Architected the real-time synchronization between the Django REST backend and React frontend.</li>
+                <li style="margin-bottom: 6px;"><strong style="color: #fff;">Technical Problem Solving:</strong> Overcame challenges associated with handling massive GIS spatial datasets using PostGIS optimization.</li>
+                <li><strong style="color: #fff;">Project Outcome:</strong> Recognized as a <strong style="color: #ffbd39;">Top 100 Finalist</strong> in the state-wide Naan Mudhalvan Niral Thiruvizha 3.0.</li>
+              </ul>
+              
+
+            </div>
+
+            <div class="col-lg-6" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+              <div style="border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.5); width: 100%; border: 1px solid rgba(255,189,57,0.3); background: #000;">
+                <video controls loop playsinline style="width: 100%; height: auto; display: block; max-height: 450px; object-fit: cover;">
+                  <source src="images/geocommand_video.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <div style="margin-top: 15px; text-align: center; font-size: 14px; color: #ffbd39; background: rgba(0,0,0,0.4); border-radius: 6px; padding: 10px 20px; border: 1px solid rgba(255,255,255,0.05); width: 100%;">GEOCOMMAND Animated Concept</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- loader -->
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 
@@ -1317,6 +1385,15 @@
   <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js" defer></script>
   <script>
     document.addEventListener("DOMContentLoaded", function() {
+      // Pause GEOCOMMAND video when modal is closed
+      if (typeof $ !== 'undefined') {
+        $('#geocommandModal').on('hidden.bs.modal', function () {
+          $(this).find('video').each(function() {
+            this.pause();
+          });
+        });
+      }
+
       if(document.getElementById("home-section")) {
         VANTA.NET({
           el: "#home-section",
@@ -1386,6 +1463,54 @@
         } else {
           btn.classList.remove('visible');
         }
+      }
+    });
+  </script>
+
+  <!-- Canvas Confetti for Achievement Card -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var canvas = document.getElementById('confetti-canvas');
+      if(canvas && typeof confetti !== 'undefined') {
+        var myConfetti = confetti.create(canvas, {
+          resize: true,
+          useWorker: true
+        });
+        var isPlayingConfetti = false;
+        var observer = new IntersectionObserver(function(entries) {
+          if(entries[0].isIntersecting && !isPlayingConfetti) {
+            isPlayingConfetti = true;
+            // Trigger confetti animation loop
+            var duration = 4000;
+            var animationEnd = Date.now() + duration;
+
+            (function frame() {
+              myConfetti({
+                particleCount: 4,
+                angle: 60,
+                spread: 55,
+                origin: { x: 0, y: 0.8 },
+                colors: ['#ffbd39', '#ffffff', '#27c93f', '#ff0000', '#00bfff']
+              });
+              myConfetti({
+                particleCount: 4,
+                angle: 120,
+                spread: 55,
+                origin: { x: 1, y: 0.8 },
+                colors: ['#ffbd39', '#ffffff', '#27c93f', '#ff0000', '#00bfff']
+              });
+
+              if (Date.now() < animationEnd) {
+                requestAnimationFrame(frame);
+              } else {
+                isPlayingConfetti = false;
+              }
+            }());
+          }
+        }, { threshold: 0.5 });
+        
+        observer.observe(canvas);
       }
     });
   </script>
