@@ -1,0 +1,23 @@
+{
+  "name": "Prakash Ramakrishnan Portfolio",
+  "short_name": "Prakash R",
+  "description": "Portfolio of Prakash Ramakrishnan, AI & Software Developer, Author, and Tech Product Builder.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#ffbd39",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "images/bg_12.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

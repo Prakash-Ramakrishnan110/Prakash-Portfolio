@@ -24,6 +24,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="Prakash Portfolio">
     <link rel="canonical" href="https://prakash-portfolio-alpha.vercel.app/">
+    <link rel="manifest" href="site.webmanifest">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="apple-touch-icon" href="images/bg_12.png">
 
@@ -35,6 +36,7 @@
     <meta property="og:description" content="Prakash Ramakrishnan is an AI and software developer, author of From Code to Innovation, and technology product builder.">
     <meta property="og:image" content="https://prakash-portfolio-alpha.vercel.app/images/bg_12.png">
     <meta property="og:image:secure_url" content="https://prakash-portfolio-alpha.vercel.app/images/bg_12.png">
+    <meta property="og:image:type" content="image/png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Prakash Ramakrishnan - AI & Software Developer">
@@ -44,6 +46,8 @@
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@PrakashR_dev">
+    <meta name="twitter:creator" content="@PrakashR_dev">
     <meta name="twitter:url" content="https://prakash-portfolio-alpha.vercel.app/">
     <meta name="twitter:title" content="Prakash Ramakrishnan | AI & Software Developer | Author">
     <meta name="twitter:description" content="Prakash Ramakrishnan is an AI and software developer, author of From Code to Innovation, and technology product builder.">
@@ -55,6 +59,13 @@
     <meta name="geo.placename" content="Salem">
     <meta name="geo.position" content="11.6643;78.1460">
     <meta name="ICBM" content="11.6643, 78.1460">
+
+    <!-- Performance & Preloading -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+    <link rel="dns-prefetch" href="//www.googletagmanager.com">
+    <link rel="preload" as="image" href="images/bg_12.png" fetchpriority="high">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -92,15 +103,40 @@
           "publisher": {
             "@id": "https://prakash-portfolio-alpha.vercel.app/#person"
           },
-          "inLanguage": "en-US"
+          "inLanguage": "en-US",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": {
+              "@type": "EntryPoint",
+              "urlTemplate": "https://prakash-portfolio-alpha.vercel.app/?s={search_term_string}"
+            },
+            "query-input": "required name=search_term_string"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://prakash-portfolio-alpha.vercel.app/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://prakash-portfolio-alpha.vercel.app/"
+            }
+          ]
         },
         {
           "@type": "ProfilePage",
           "@id": "https://prakash-portfolio-alpha.vercel.app/#webpage",
           "url": "https://prakash-portfolio-alpha.vercel.app/",
           "name": "Prakash Ramakrishnan | AI & Software Developer | Author",
+          "description": "Prakash Ramakrishnan is an AI and software developer, author of From Code to Innovation, and technology product builder. Expert in Full-Stack, AI Automation, and SaaS.",
+          "dateModified": "2026-10-18",
           "isPartOf": {
             "@id": "https://prakash-portfolio-alpha.vercel.app/#website"
+          },
+          "breadcrumb": {
+            "@id": "https://prakash-portfolio-alpha.vercel.app/#breadcrumb"
           },
           "about": {
             "@id": "https://prakash-portfolio-alpha.vercel.app/#person"
@@ -113,19 +149,74 @@
           "@type": "Person",
           "@id": "https://prakash-portfolio-alpha.vercel.app/#person",
           "name": "Prakash Ramakrishnan",
+          "alternateName": "Prakash R",
+          "givenName": "Prakash",
+          "familyName": "Ramakrishnan",
           "url": "https://prakash-portfolio-alpha.vercel.app/",
           "jobTitle": "AI & Software Developer",
-          "description": "AI and software developer, author, and technology product builder.",
-          "image": "https://prakash-portfolio-alpha.vercel.app/images/bg_12.png",
-          "homeLocation": {
-            "@type": "Place",
-            "name": "Salem, Tamil Nadu, India"
+          "description": "AI and software developer, author of From Code to Innovation, and technology product builder specializing in Full-Stack, AI Automation, and SaaS.",
+          "image": {
+            "@type": "ImageObject",
+            "url": "https://prakash-portfolio-alpha.vercel.app/images/bg_12.png",
+            "width": 1200,
+            "height": 630
           },
+          "email": "mailto:prakash7418r@gmail.com",
+          "telephone": "+91-7418132954",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Salem",
+            "addressRegion": "Tamil Nadu",
+            "addressCountry": "IN",
+            "postalCode": "636808"
+          },
+          "alumniOf": {
+            "@type": "EducationalOrganization",
+            "name": "Sri Shanmugha College of Engineering and Technology",
+            "url": "https://www.sscet.ac.in/"
+          },
+          "hasOccupation": {
+            "@type": "Occupation",
+            "name": "AI & Software Developer",
+            "occupationLocation": {
+              "@type": "Country",
+              "name": "India"
+            },
+            "skills": "Full-Stack Development, AI Automation, SaaS, React, Next.js, Python, Kotlin, Node.js, LLMs, RAG"
+          },
+          "knowsAbout": [
+            "Full-Stack Web Development",
+            "AI Automation",
+            "Large Language Models",
+            "SaaS Architecture",
+            "Mobile App Development",
+            "RAG & Vector Architectures",
+            "UI/UX Design",
+            "Cloud & API Integrations"
+          ],
+          "award": "Top 100 Finalist – Naan Mudhalvan Niral Thiruvizha 3.0 (TNSDEC, Government of Tamil Nadu, 2025-2026)",
           "sameAs": [
             "https://www.linkedin.com/in/prakash110/",
             "https://github.com/Prakash-Ramakrishnan110",
-            "https://www.amazon.com/author/prakashramakrishnan"
+            "https://x.com/PrakashR110",
+            "https://www.amazon.com/author/prakashramakrishnan",
+            "https://zenodo.org/search?q=Prakash+Ramakrishnan",
+            "https://gravatar.com/luckydreamilyc932ca53f5",
+            "https://www.npmjs.com/package/@prakash1935/devorax",
+            "https://www.instagram.com/prakash_r_1908"
           ]
+        },
+        {
+          "@type": "SoftwareApplication",
+          "@id": "https://www.npmjs.com/package/@prakash1935/devorax",
+          "name": "DevoraX",
+          "applicationCategory": "DeveloperApplication",
+          "operatingSystem": "Cross-platform",
+          "url": "https://www.npmjs.com/package/@prakash1935/devorax",
+          "author": {
+            "@id": "https://prakash-portfolio-alpha.vercel.app/#person"
+          },
+          "description": "Cross-platform developer utility package published on NPM by Prakash Ramakrishnan."
         },
         {
           "@type": "Book",
@@ -136,8 +227,115 @@
           },
           "isbn": "978-93-344-6646-1",
           "bookEdition": "First Edition",
+          "bookFormat": "https://schema.org/EBook",
+          "inLanguage": "en",
           "datePublished": "2026",
-          "url": "https://www.amazon.com/dp/B0HGQ47N2J"
+          "url": "https://www.amazon.com/dp/B0HGQ47N2J",
+          "publisher": {
+            "@type": "Organization",
+            "name": "Amazon KDP"
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5.0",
+            "reviewCount": "1",
+            "bestRating": "5"
+          }
+        },
+        {
+          "@type": "ScholarlyArticle",
+          "@id": "https://zenodo.org/records/22692828",
+          "name": "SearchTrust ML: A Claim-Level Evaluation Protocol",
+          "author": {
+            "@id": "https://prakash-portfolio-alpha.vercel.app/#person"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Zenodo"
+          },
+          "url": "https://zenodo.org/records/22692828",
+          "identifier": "10.5281/zenodo.22692828",
+          "inLanguage": "en",
+          "isPartOf": {
+            "@type": "Periodical",
+            "name": "Zenodo Repository"
+          }
+        },
+        {
+          "@type": "ScholarlyArticle",
+          "@id": "https://zenodo.org/records/22733569",
+          "name": "Automated Assignment Evaluation System: A Privacy-Preserving, Locally Hosted Solution for Assessment in Higher Education",
+          "author": [
+            { "@id": "https://prakash-portfolio-alpha.vercel.app/#person" },
+            { "@type": "Person", "name": "Jaseenash R" },
+            { "@type": "Person", "name": "Mukesh S" },
+            { "@type": "Person", "name": "Vidhyapathi R" },
+            { "@type": "Person", "name": "Jeevanantham G" }
+          ],
+          "publisher": {
+            "@type": "Organization",
+            "name": "Zenodo"
+          },
+          "url": "https://zenodo.org/records/22733569",
+          "identifier": "10.5281/zenodo.22733569",
+          "inLanguage": "en"
+        },
+        {
+          "@type": "ScholarlyArticle",
+          "@id": "https://zenodo.org/records/22733708",
+          "name": "Automated Fairness Audit and Bias Mitigation Pipeline for Loan Approval Models with Regulatory Compliance Reporting",
+          "author": [
+            { "@id": "https://prakash-portfolio-alpha.vercel.app/#person" },
+            { "@type": "Person", "name": "Jaseenash R" },
+            { "@type": "Person", "name": "Mukesh S" },
+            { "@type": "Person", "name": "Vidhyapathi R" },
+            { "@type": "Person", "name": "Jeevanantham G" }
+          ],
+          "publisher": {
+            "@type": "Organization",
+            "name": "Zenodo"
+          },
+          "url": "https://zenodo.org/records/22733708",
+          "identifier": "10.5281/zenodo.22733708",
+          "inLanguage": "en"
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://prakash-portfolio-alpha.vercel.app/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Do you provide continuous maintenance & modifications for completed projects?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, absolutely! I provide continuous post-launch support, regular content updates, UI tweaks, bug fixes, and feature enhancements to ensure your completed portfolio or website remains up-to-date and fully functional."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What if my project requires a tech tool or stack you haven't used before?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "I specialize in rapid skill acquisition and fast adaptation. If your project mandates a specific new tool, framework, or workflow, I am prepared to learn and apply it effectively within limited timeframes to meet your deadlines without compromising quality."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Do you take on non-IT or operational tasks alongside technical development?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. I handle full-scope task execution spanning technical full-stack web and app development, AI automations, UI/UX design, as well as operational, documentation, and non-IT creative tasks."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How quickly can you deliver updates or modifications to an existing site?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "I offer rapid turnarounds for revisions and modifications. Minor content or styling tweaks are typically completed within hours, while larger feature additions are scheduled with clear, reliable turnaround times."
+              }
+            }
+          ]
         }
       ]
     }
@@ -785,7 +983,7 @@
 						</div>
 						
 						<div class="mb-4 text-center">
-							<img src="images/front book_page-0001.png" alt="Book Cover" style="max-height: 200px; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.5);">
+							<img src="images/front book_page-0001.png" alt="Book Cover: From Code to Innovation by Prakash Ramakrishnan" loading="lazy" decoding="async" style="max-height: 200px; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.5);">
 						</div>
 						
 						<h3 class="mb-3" style="font-size: 22px; color: #fff; line-height: 1.4;">From Code to Innovation: Building Real-World Technology Products with AI</h3>
@@ -822,7 +1020,7 @@
 						</div>
 						
 						<div class="mb-4 text-center">
-							<img src="images/research_paper_cover_1790519646636.png" alt="Research Cover" style="max-height: 200px; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.1);">
+							<img src="images/research_paper_cover_1790519646636.png" alt="SearchTrust ML Research Paper Cover - Prakash Ramakrishnan" loading="lazy" decoding="async" style="max-height: 200px; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.1);">
 						</div>
 						
 						<h3 class="mb-3" style="font-size: 22px; color: #fff; line-height: 1.4;">SearchTrust ML: A Claim-Level Evaluation Protocol</h3>
@@ -853,7 +1051,7 @@
 						</div>
 						
 						<div class="mb-4 text-center">
-							<img src="images/research_paper_cover_1790519646636.png" alt="Research Cover" style="max-height: 200px; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.1);">
+							<img src="images/research_paper_cover_1790519646636.png" alt="Automated Assignment Evaluation System (AAES) Research Paper Cover - Prakash Ramakrishnan" loading="lazy" decoding="async" style="max-height: 200px; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.1);">
 						</div>
 						
 						<h3 class="mb-3" style="font-size: 22px; color: #fff; line-height: 1.4;">Automated Assignment Evaluation System: A Privacy-Preserving, Locally Hosted Solution for Assessment in Higher Education</h3>
@@ -885,7 +1083,7 @@
 						</div>
 						
 						<div class="mb-4 text-center">
-							<img src="images/research_paper_cover_1790519646636.png" alt="Research Cover" style="max-height: 200px; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.1);">
+							<img src="images/research_paper_cover_1790519646636.png" alt="Automated Fairness Audit and Bias Mitigation Pipeline Research Paper Cover - Prakash Ramakrishnan" loading="lazy" decoding="async" style="max-height: 200px; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.1);">
 						</div>
 						
 						<h3 class="mb-3" style="font-size: 22px; color: #fff; line-height: 1.4;">Automated Fairness Audit and Bias Mitigation Pipeline for Loan Approval Models with Regulatory Compliance Reporting</h3>
@@ -1240,11 +1438,11 @@
               <h2 class="ftco-heading-2">About</h2>
               <p>Prakash Ramakrishnan is a developer and designer passionate about creating digital solutions that make an impact.</p>
               <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
-                <li class="ftco-animate"><a href="https://github.com/Prakash-Ramakrishnan110" target="_blank" title="GitHub Profile"><span class="icon-github"></span></a></li>
-                <li class="ftco-animate"><a href="https://www.linkedin.com/in/prakash110/" target="_blank" title="LinkedIn Profile"><span class="icon-linkedin"></span></a></li>
-                <li class="ftco-animate"><a href="https://www.instagram.com/prakash_r_1908?igsh=MWhzeHIyNmRpeDVobw==" target="_blank" title="Instagram Profile"><span class="icon-instagram"></span></a></li>
-                <li class="ftco-animate"><a href="https://x.com/PrakashR110" target="_blank" title="X (Twitter) Profile"><span class="icon-twitter"></span></a></li>
-                <li class="ftco-animate"><a href="https://www.amazon.com/author/prakashramakrishnan" target="_blank" title="Amazon Author Profile"><span class="icon-amazon"></span></a></li>
+                <li class="ftco-animate"><a href="https://github.com/Prakash-Ramakrishnan110" target="_blank" rel="me noopener noreferrer" title="GitHub Profile"><span class="icon-github"></span></a></li>
+                <li class="ftco-animate"><a href="https://www.linkedin.com/in/prakash110/" target="_blank" rel="me noopener noreferrer" title="LinkedIn Profile"><span class="icon-linkedin"></span></a></li>
+                <li class="ftco-animate"><a href="https://www.instagram.com/prakash_r_1908?igsh=MWhzeHIyNmRpeDVobw==" target="_blank" rel="me noopener noreferrer" title="Instagram Profile"><span class="icon-instagram"></span></a></li>
+                <li class="ftco-animate"><a href="https://x.com/PrakashR110" target="_blank" rel="me noopener noreferrer" title="X (Twitter) Profile"><span class="icon-twitter"></span></a></li>
+                <li class="ftco-animate"><a href="https://www.amazon.com/author/prakashramakrishnan" target="_blank" rel="me noopener noreferrer" title="Amazon Author Profile"><span class="icon-amazon"></span></a></li>
               </ul>
             </div>
           </div>

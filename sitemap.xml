@@ -1,11 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://prakash-portfolio-alpha.vercel.app/</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-10-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://prakash-portfolio-alpha.vercel.app/images/bg_12.png</image:loc>
+      <image:title>Prakash Ramakrishnan - AI &amp; Software Developer</image:title>
+      <image:caption>Official portrait and portfolio hero image of Prakash Ramakrishnan</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://prakash-portfolio-alpha.vercel.app/images/front%20book_page-0001.png</image:loc>
+      <image:title>From Code to Innovation: Building Real-World Technology Products with AI - Book Cover</image:title>
+      <image:caption>Cover of the published book From Code to Innovation by author Prakash Ramakrishnan</image:caption>
+    </image:image>
   </url>
 </urlset>
