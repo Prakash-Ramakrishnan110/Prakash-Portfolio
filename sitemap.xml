@@ -16,5 +16,20 @@
       <image:title>From Code to Innovation: Building Real-World Technology Products with AI - Book Cover</image:title>
       <image:caption>Cover of the published book From Code to Innovation by author Prakash Ramakrishnan</image:caption>
     </image:image>
+    <image:image>
+      <image:loc>https://prakash-portfolio-alpha.vercel.app/images/SearchTrust%20ML_%20Claim-Level%20Evaluation.png</image:loc>
+      <image:title>SearchTrust ML: A Claim-Level Evaluation Protocol - Research Paper</image:title>
+      <image:caption>Research paper cover for SearchTrust ML published on Zenodo by Prakash Ramakrishnan</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://prakash-portfolio-alpha.vercel.app/images/Automated%20Assignment%20Evaluation%20System.png</image:loc>
+      <image:title>Automated Assignment Evaluation System (AAES) - Research Paper</image:title>
+      <image:caption>Research paper cover for AAES published on Zenodo</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://prakash-portfolio-alpha.vercel.app/images/Automated%20Fairness%20Audit%20Pipeline.png</image:loc>
+      <image:title>Automated Fairness Audit and Bias Mitigation Pipeline - Research Paper</image:title>
+      <image:caption>Research paper cover for Fairness Audit Pipeline published on Zenodo</image:caption>
+    </image:image>
   </url>
 </urlset>
