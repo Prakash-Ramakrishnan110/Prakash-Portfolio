@@ -65,29 +65,38 @@
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
     <link rel="dns-prefetch" href="//www.googletagmanager.com">
-    <link rel="preload" as="image" href="images/bg_12.png" fetchpriority="high">
+    <link rel="preload" as="image" href="images/bg_12.webp" type="image/webp" fetchpriority="high">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 
+    <!-- Core Critical Stylesheets -->
     <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
-    <link rel="stylesheet" href="css/animate.css">
-    
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/custom_styles.css">
 
-    <link rel="stylesheet" href="css/aos.css">
-
-    <link rel="stylesheet" href="css/ionicons.min.css">
-    
-	<link rel="stylesheet" href="css/flaticon.css">
-	<link rel="stylesheet" href="css/icomoon.css">
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/responsive.css">
-	<link rel="stylesheet" href="css/custom_styles.css">
-	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <!-- Deferred Non-Critical Stylesheets to Prevent Render Blocking -->
+    <link rel="stylesheet" href="css/animate.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="css/magnific-popup.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="css/aos.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="css/ionicons.min.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="css/flaticon.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" media="print" onload="this.media='all'">
+    <noscript>
+      <link rel="stylesheet" href="css/animate.css">
+      <link rel="stylesheet" href="css/owl.carousel.min.css">
+      <link rel="stylesheet" href="css/owl.theme.default.min.css">
+      <link rel="stylesheet" href="css/magnific-popup.css">
+      <link rel="stylesheet" href="css/aos.css">
+      <link rel="stylesheet" href="css/ionicons.min.css">
+      <link rel="stylesheet" href="css/flaticon.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    </noscript>
 
     <!-- Advanced SEO Schema.org Graph -->
     <script type="application/ld+json">
@@ -444,7 +453,7 @@
 	      	<div class="overlay"></div>
 	        <div class="container">
 	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
-	          	<div class="one-third js-fullheight order-md-last img hero-img-wrap" style="background-image:url(images/bg_12.png);">
+	          	<div class="one-third js-fullheight order-md-last img hero-img-wrap" style="background-image:url(images/bg_12.webp);">
 	          		<div class="overlay"></div>
 					<div class="hover-greeting">
 						<span>Welcome to my digital playground!</span>
@@ -890,10 +899,10 @@
                     <canvas id="confetti-canvas" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0;"></canvas>
 					<div class="achievement-logo mr-md-4 mb-3 mb-md-0" style="flex-shrink: 0; text-align: center; z-index: 1; display: flex; flex-direction: column; gap: 10px; align-items: center; background: #fff; padding: 15px; border-radius: 12px; border: 1px solid rgba(255,189,57,0.3);">
                         <div style="display: flex; gap: 15px; align-items: center; justify-content: center; flex-wrap: wrap;">
-						    <img src="images/logo_1.png" alt="TN Govt Logo" loading="lazy" style="height: 60px; width: auto; object-fit: contain;">
-						    <img src="images/logo_2.png" alt="Naan Mudhalvan Logo" loading="lazy" style="height: 60px; width: auto; object-fit: contain;">
+						    <img src="images/logo_1.png" alt="TN Govt Logo" width="60" height="66" loading="lazy" style="height: 60px; width: auto; object-fit: contain;">
+						    <img src="images/logo_2.png" alt="Naan Mudhalvan Logo" width="95" height="60" loading="lazy" style="height: 60px; width: auto; object-fit: contain;">
                             <!-- Niral Thiruvizha Logo -->
-                            <img src="images/niral_logo.png" alt="Niral Thiruvizha Logo" loading="lazy" style="height: 60px; width: auto; object-fit: contain;">
+                            <img src="images/niral_logo.webp" alt="Niral Thiruvizha Logo" width="65" height="60" loading="lazy" style="height: 60px; width: auto; object-fit: contain;">
                         </div>
                         <div style="font-size: 11px; font-weight: 700; color: #333; text-transform: uppercase; letter-spacing: 1px; margin-top: 5px;">Niral Thiruvizha 3.0</div>
 					</div>
@@ -1055,7 +1064,7 @@
 						</div>
 						
 						<div class="mb-4 text-center">
-							<img src="images/front book_page-0001.png" alt="Book Cover: From Code to Innovation by Prakash Ramakrishnan" loading="lazy" decoding="async" style="max-height: 200px; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.5);">
+							<img src="images/front_book_page.webp" alt="Book Cover: From Code to Innovation by Prakash Ramakrishnan" width="133" height="200" loading="lazy" decoding="async" style="max-height: 200px; width: auto; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.5);">
 						</div>
 						
 						<h3 class="mb-3" style="font-size: 22px; color: #fff; line-height: 1.4;">From Code to Innovation: Building Real-World Technology Products with AI</h3>
@@ -1092,7 +1101,7 @@
 						</div>
 						
 						<div class="mb-4 text-center">
-							<img src="images/SearchTrust ML_ Claim-Level Evaluation.png" alt="SearchTrust ML Research Paper Cover - Prakash Ramakrishnan" loading="lazy" decoding="async" style="max-height: 200px; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.1);">
+							<img src="images/searchtrust_cover.webp" alt="SearchTrust ML Research Paper Cover - Prakash Ramakrishnan" width="133" height="200" loading="lazy" decoding="async" style="max-height: 200px; width: auto; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.1);">
 						</div>
 						
 						<h3 class="mb-3" style="font-size: 22px; color: #fff; line-height: 1.4;">SearchTrust ML: A Claim-Level Evaluation Protocol</h3>
@@ -1123,7 +1132,7 @@
 						</div>
 						
 						<div class="mb-4 text-center">
-							<img src="images/Automated Assignment Evaluation System.png" alt="Automated Assignment Evaluation System (AAES) Research Paper Cover - Prakash Ramakrishnan" loading="lazy" decoding="async" style="max-height: 200px; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.1);">
+							<img src="images/aaes_cover.webp" alt="Automated Assignment Evaluation System (AAES) Research Paper Cover - Prakash Ramakrishnan" width="133" height="200" loading="lazy" decoding="async" style="max-height: 200px; width: auto; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.1);">
 						</div>
 						
 						<h3 class="mb-3" style="font-size: 22px; color: #fff; line-height: 1.4;">Automated Assignment Evaluation System: A Privacy-Preserving, Locally Hosted Solution for Assessment in Higher Education</h3>
@@ -1155,7 +1164,7 @@
 						</div>
 						
 						<div class="mb-4 text-center">
-							<img src="images/Automated Fairness Audit Pipeline.png" alt="Automated Fairness Audit and Bias Mitigation Pipeline Research Paper Cover - Prakash Ramakrishnan" loading="lazy" decoding="async" style="max-height: 200px; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.1);">
+							<img src="images/fairness_cover.webp" alt="Automated Fairness Audit and Bias Mitigation Pipeline Research Paper Cover - Prakash Ramakrishnan" width="133" height="200" loading="lazy" decoding="async" style="max-height: 200px; width: auto; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.1);">
 						</div>
 						
 						<h3 class="mb-3" style="font-size: 22px; color: #fff; line-height: 1.4;">Automated Fairness Audit and Bias Mitigation Pipeline for Loan Approval Models with Regulatory Compliance Reporting</h3>
@@ -1323,7 +1332,7 @@
       </div>
     </section>
 
-    <section class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
+    <section class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.webp)">
 			<div class="container">
 				<div class="row justify-content-center">
 					<div class="col-md-7 ftco-animate text-center">
@@ -1495,7 +1504,7 @@
           </div>
 
           <div class="col-md-6 d-flex">
-          	<div class="img" style="background-image: url(images/about.png); border-radius: 12px; min-height: 400px; background-size: cover; background-position: center top;"></div>
+          	<div class="img" style="background-image: url(images/about.webp); border-radius: 12px; min-height: 400px; background-size: cover; background-position: center top;"></div>
           </div>
         </div>
       </div>
@@ -1621,7 +1630,7 @@
 
             <div class="col-lg-6" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
               <div style="border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.5); width: 100%; border: 1px solid rgba(255,189,57,0.3); background: #000;">
-                <video controls loop playsinline style="width: 100%; height: auto; display: block; max-height: 450px; object-fit: cover;">
+                <video controls loop playsinline preload="none" poster="images/niral_logo.webp" style="width: 100%; height: auto; display: block; max-height: 450px; object-fit: cover;">
                   <source src="images/geocommand_video.mp4" type="video/mp4">
                   Your browser does not support the video tag.
                 </video>
@@ -1653,9 +1662,7 @@
   
   <script src="js/main.js" defer></script>
   
-  <!-- Trending 3D Hero Background (Vanta.js) -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js" defer></script>
-  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js" defer></script>
+  <!-- Optimized Hero Background (Vanta.js on Desktop Only) -->
   <script>
     document.addEventListener("DOMContentLoaded", function() {
       // Pause GEOCOMMAND video when modal is closed
@@ -1667,23 +1674,50 @@
         });
       }
 
-      if(document.getElementById("home-section")) {
-        VANTA.NET({
-          el: "#home-section",
-          mouseControls: true,
-          touchControls: true,
-          gyroControls: false,
-          minHeight: 200.00,
-          minWidth: 200.00,
-          scale: 1.00,
-          scaleMobile: 1.00,
-          color: 0xffbd39, // Portfolio Theme Yellow
-          backgroundColor: 0x000000, // True black for high contrast
-          points: 8.00,
-          maxDistance: 20.00,
-          spacing: 25.00,
-          showDots: true
-        });
+      // Check if desktop pointer device with high performance (not touch/mobile)
+      var isDesktop = window.innerWidth >= 992 && !('ontouchstart' in window) && (navigator.maxTouchPoints || 0) <= 1;
+      
+      if (isDesktop && document.getElementById("home-section")) {
+        // Dynamically load Three.js and Vanta only on desktop
+        var s1 = document.createElement('script');
+        s1.src = "https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js";
+        s1.onload = function() {
+          var s2 = document.createElement('script');
+          s2.src = "https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js";
+          s2.onload = function() {
+            if (window.VANTA && window.VANTA.NET) {
+              var vEffect = VANTA.NET({
+                el: "#home-section",
+                mouseControls: true,
+                touchControls: false,
+                gyroControls: false,
+                minHeight: 200.00,
+                minWidth: 200.00,
+                scale: 1.00,
+                color: 0xffbd39,
+                backgroundColor: 0x000000,
+                points: 5.00,
+                maxDistance: 15.00,
+                spacing: 35.00,
+                showDots: true
+              });
+
+              // Pause rendering when user scrolls away from hero section
+              var observer = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                  if (!entry.isIntersecting && vEffect && vEffect.pause) {
+                    vEffect.pause();
+                  } else if (vEffect && vEffect.resume) {
+                    vEffect.resume();
+                  }
+                });
+              }, { threshold: 0.05 });
+              observer.observe(document.getElementById("home-section"));
+            }
+          };
+          document.body.appendChild(s2);
+        };
+        document.body.appendChild(s1);
       }
     });
   </script>
@@ -1740,48 +1774,43 @@
     });
   </script>
 
-  <!-- Canvas Confetti for Achievement Card -->
-  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <!-- Canvas Confetti for Achievement Card (Lazy-loaded on Intersection) -->
   <script>
     document.addEventListener("DOMContentLoaded", function() {
       var canvas = document.getElementById('confetti-canvas');
-      if(canvas && typeof confetti !== 'undefined') {
-        var myConfetti = confetti.create(canvas, {
-          resize: true,
-          useWorker: true
-        });
+      if (canvas) {
         var isPlayingConfetti = false;
         var observer = new IntersectionObserver(function(entries) {
-          if(entries[0].isIntersecting && !isPlayingConfetti) {
+          if (entries[0].isIntersecting && !isPlayingConfetti) {
             isPlayingConfetti = true;
-            // Trigger confetti animation loop
-            var duration = 4000;
-            var animationEnd = Date.now() + duration;
+            
+            var runConfetti = function() {
+              if (typeof confetti === 'undefined') return;
+              var myConfetti = confetti.create(canvas, { resize: true, useWorker: true });
+              var duration = 3000;
+              var animationEnd = Date.now() + duration;
 
-            (function frame() {
-              myConfetti({
-                particleCount: 4,
-                angle: 60,
-                spread: 55,
-                origin: { x: 0, y: 0.8 },
-                colors: ['#ffbd39', '#ffffff', '#27c93f', '#ff0000', '#00bfff']
-              });
-              myConfetti({
-                particleCount: 4,
-                angle: 120,
-                spread: 55,
-                origin: { x: 1, y: 0.8 },
-                colors: ['#ffbd39', '#ffffff', '#27c93f', '#ff0000', '#00bfff']
-              });
+              (function frame() {
+                myConfetti({ particleCount: 4, angle: 60, spread: 55, origin: { x: 0, y: 0.8 }, colors: ['#ffbd39', '#ffffff', '#27c93f', '#ff0000', '#00bfff'] });
+                myConfetti({ particleCount: 4, angle: 120, spread: 55, origin: { x: 1, y: 0.8 }, colors: ['#ffbd39', '#ffffff', '#27c93f', '#ff0000', '#00bfff'] });
+                if (Date.now() < animationEnd) {
+                  requestAnimationFrame(frame);
+                } else {
+                  isPlayingConfetti = false;
+                }
+              }());
+            };
 
-              if (Date.now() < animationEnd) {
-                requestAnimationFrame(frame);
-              } else {
-                isPlayingConfetti = false;
-              }
-            }());
+            if (typeof confetti === 'undefined') {
+              var s = document.createElement('script');
+              s.src = "https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js";
+              s.onload = runConfetti;
+              document.body.appendChild(s);
+            } else {
+              runConfetti();
+            }
           }
-        }, { threshold: 0.5 });
+        }, { threshold: 0.3 });
         
         observer.observe(canvas);
       }
