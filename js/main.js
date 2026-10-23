@@ -307,7 +307,29 @@
     fixedContentPos: false
   });
 
+  // Presentation Category Filter
+  $('.presentation-filter-btn').on('click', function() {
+    $('.presentation-filter-btn').removeClass('active');
+    $(this).addClass('active');
+
+    var filter = $(this).attr('data-filter');
+
+    if (filter === 'all') {
+      $('.presentation-item').fadeIn(350);
+    } else {
+      $('.presentation-item').each(function() {
+        var categories = $(this).attr('data-category').split(' ');
+        if (categories.indexOf(filter) !== -1) {
+          $(this).fadeIn(350);
+        } else {
+          $(this).fadeOut(250);
+        }
+      });
+    }
+  });
+
 })(jQuery);
+
 
 
 
