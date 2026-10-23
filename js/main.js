@@ -44,44 +44,53 @@
 
 
 
-// Burger Menu - Simplified and Fixed
+// Burger Menu - Simplified and Fixed with Auto-Close on Scroll
 	var burgerMenu = function() {
+
+		var closeMobileMenu = function() {
+			var $nav = $('#ftco-nav');
+			var $button = $('.js-fh5co-nav-toggle');
+			if ($nav.hasClass('show')) {
+				$nav.removeClass('show');
+				$nav.hide();
+				$button.removeClass('active');
+				$button.attr('aria-expanded', 'false');
+			}
+		};
 
 		// Direct click handler for the hamburger button
 		$(document).on('click', '.js-fh5co-nav-toggle', function(event){
 			event.preventDefault();
-			console.log('Hamburger clicked!');
 			
 			var $nav = $('#ftco-nav');
 			var $button = $(this);
 			
 			// Simple toggle using Bootstrap's collapse
 			if ($nav.hasClass('show')) {
-				$nav.removeClass('show');
-				$nav.hide();
-				$button.removeClass('active');
-				console.log('Menu hidden');
+				closeMobileMenu();
 			} else {
 				$nav.addClass('show');
 				$nav.show();
 				$button.addClass('active');
-				console.log('Menu shown');
+				$button.attr('aria-expanded', 'true');
 			}
 		});
 
 		// Close menu when clicking on navigation links
 		$(document).on('click', '#ftco-nav .nav-link', function(event){
-			console.log('Navigation link clicked - closing menu');
-			
-			var $nav = $('#ftco-nav');
-			var $button = $('.js-fh5co-nav-toggle');
-			
-			// Close the menu
-			$nav.removeClass('show');
-			$nav.hide();
-			$button.removeClass('active');
-			
-			console.log('Menu closed after link click');
+			closeMobileMenu();
+		});
+
+		// Automatically close menu when user scrolls
+		$(window).on('scroll', function() {
+			closeMobileMenu();
+		});
+
+		// Close menu when clicking/tapping outside of navbar
+		$(document).on('click touchstart', function(event) {
+			if (!$(event.target).closest('#ftco-navbar').length) {
+				closeMobileMenu();
+			}
 		});
 
 		// Initialize menu state on page load
@@ -91,7 +100,6 @@
 				$nav.hide();
 				$nav.removeClass('show');
 				$('.js-fh5co-nav-toggle').removeClass('active');
-				console.log('Menu initialized as hidden');
 			}
 		});
 
