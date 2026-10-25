@@ -1200,80 +1200,6 @@
     }
 }
 
-/* ==========================================
-   Interactive FAQ / Work Commitments Accordion
-   ========================================== */
-.faq-section {
-    padding: 60px 0;
-    font-family: 'Poppins', sans-serif !important;
-}
-
-.faq-section h2,
-.faq-section p,
-.faq-accordion,
-.faq-accordion .card,
-.faq-accordion .btn-link,
-.faq-accordion .card-body {
-    font-family: 'Poppins', sans-serif !important;
-}
-
-.faq-accordion .card {
-    background: #111;
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 12px !important;
-    margin-bottom: 16px;
-    overflow: hidden;
-    transition: border-color 0.3s ease;
-}
-
-.faq-accordion .card:hover {
-    border-color: rgba(255, 189, 57, 0.4);
-}
-
-.faq-accordion .card-header {
-    background: rgba(255, 255, 255, 0.02);
-    padding: 0;
-    border-bottom: none;
-}
-
-.faq-accordion .btn-link {
-    color: #fff;
-    font-size: 16px;
-    font-weight: 600;
-    font-family: 'Poppins', sans-serif !important;
-    text-align: left;
-    width: 100%;
-    padding: 20px 25px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.faq-accordion .btn-link:hover,
-.faq-accordion .btn-link[aria-expanded="true"] {
-    color: #ffbd39;
-    text-decoration: none;
-}
-
-.faq-accordion .btn-link .faq-icon {
-    font-size: 14px;
-    color: #ffbd39;
-    transition: transform 0.3s ease;
-}
-
-.faq-accordion .btn-link[aria-expanded="true"] .faq-icon {
-    transform: rotate(180deg);
-}
-
-.faq-accordion .card-body {
-    color: rgba(255, 255, 255, 0.75);
-    font-size: 14.5px;
-    font-family: 'Poppins', sans-serif !important;
-    line-height: 1.7;
-    padding: 0 25px 22px 25px;
-}
 
 /* ==========================================
    Trending 2026 UI Features
@@ -2010,18 +1936,6 @@ html.light-mode .marquee-category {
 }
 html.light-mode .marquee-item span {
     color: #333333 !important;
-}
-
-/* FAQ Accordion */
-html.light-mode .faq-accordion .card {
-    background: #ffffff !important;
-    border: 1px solid rgba(0, 0, 0, 0.1) !important;
-}
-html.light-mode .faq-accordion .btn-link {
-    color: #111111 !important;
-}
-html.light-mode .faq-accordion .card-body {
-    color: #555555 !important;
 }
 
 /* Footer & Other sections */
